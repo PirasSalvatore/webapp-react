@@ -1,2 +1,13 @@
 @import 'bootstrap';
 @import 'bootstrap-icons';
+
+
+header {
+
+
+  .navbar {
+    img {
+      width: 100px;
+    }
+  }
+}
