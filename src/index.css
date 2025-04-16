@@ -11,3 +11,25 @@ header {
     }
   }
 }
+
+.movies-list {
+
+  .card {
+    img {
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+  }
+}
+
+.details {
+  .jumbotron {
+
+    height: 50px;
+
+    img {
+      width: fit-content;
+      height: auto;
+    }
+  }
+}
