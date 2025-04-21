@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
+import Form from "../Compounent/Form"
 
 const url_movies = "http://localhost:3000/api/v1/movies"
 const url_base = "http://localhost:3000"
@@ -29,10 +30,10 @@ export default function SingleMovie() {
         <>
             <section className="movie-details">
                 <div className="jumbotron ">
-                    <div className="fluid-container p-5">
+                    <div className="container p-2">
                         <div className="row justify-content-between align-items-center">
                             <div className="col-8">
-                                <h1 className="text-center">{title}</h1>
+                                <h1>{title}</h1>
                             </div>
                             <div className="col-4">
                                 <img src={`${url_base}${image}`} alt={title} />
@@ -44,7 +45,7 @@ export default function SingleMovie() {
                 <div className="container">
                     <div className="card">
                         <div className="card-header">
-                            <h2>{title}</h2>
+                            <h2>DESCRIPTION</h2>
                         </div>
 
                         <div className="card-body">
@@ -62,6 +63,11 @@ export default function SingleMovie() {
                             </p>
 
                             <div className="reviews">
+                                <h5>REVIEWS :</h5>
+
+                                <Form movieID={id} />
+
+
                                 {
                                     reviews && reviews.length > 0 ? (reviews.map((review) => (
                                         <div key={review.id} className="card">
@@ -79,8 +85,8 @@ export default function SingleMovie() {
 
                         </div>
                     </div>
-                </div>
-            </section>
+                </div >
+            </section >
         </>
     )
 }

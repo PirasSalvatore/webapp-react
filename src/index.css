@@ -22,14 +22,28 @@ header {
   }
 }
 
-.details {
+.movie-details {
   .jumbotron {
 
-    height: 50px;
+    h1 {
+      font-size: 3rem;
+    }
 
     img {
-      width: fit-content;
-      height: auto;
+
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+
+  .reviews {
+    .card {
+      margin-left: 10px;
+    }
+
+    .col-btn {
+      justify-self: center;
     }
   }
 }
