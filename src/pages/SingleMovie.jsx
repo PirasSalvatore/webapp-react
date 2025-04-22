@@ -5,10 +5,15 @@ import Form from "../Compounent/Form"
 const url_movies = "http://localhost:3000/api/v1/movies"
 const url_base = "http://localhost:3000"
 
+import { useContext } from 'react'
+import GlobalContext from '../context/GlobalContex'
+
 
 export default function SingleMovie() {
 
     const [movie, setMovie] = useState({})
+
+    const { isLoading, setIsLoading } = useContext(GlobalContext)
 
     const { id } = useParams()
 
@@ -17,6 +22,7 @@ export default function SingleMovie() {
         fetch(`${url_movies}/${id}`)
             .then(response => response.json())
             .then(data => setMovie(data))
+            .finally(() => setIsLoading(false))
             .catch(error => console.error('Error fetching movies:', error));
 
         console.log(movie);

@@ -2,8 +2,8 @@
 @import 'bootstrap-icons';
 
 
-header {
 
+header {
 
   .navbar {
     img {
@@ -42,8 +42,5 @@ header {
       margin-left: 10px;
     }
 
-    .col-btn {
-      justify-self: center;
-    }
   }
 }
