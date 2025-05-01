@@ -3,12 +3,11 @@ import { Outlet } from "react-router-dom"
 import Header from "../compounents/Header"
 import Footer from "../compounents/Footer"
 
-import { useContext } from "react"
-import GlobalContext from "../contexts/GlobalContex"
+import { useMoviesProvider } from "../contexts/MoviesContex"
 
 export default function DefaultLayout() {
 
-    const { isLoading } = useContext(GlobalContext)
+    const { isLoading } = useMoviesProvider()
 
     return (
         <>

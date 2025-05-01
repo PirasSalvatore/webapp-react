@@ -20,7 +20,7 @@ function MoviesProvider({ children }) {
     }, [])
 
     return (
-        <MoviesContext.Provider value={{ movies, isLoading, error }}>
+        <MoviesContext.Provider value={{ movies, isLoading, setIsLoading, error }}>
             {children}
         </MoviesContext.Provider>
     )

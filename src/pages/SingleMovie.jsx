@@ -1,19 +1,18 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import Form from "../Compounent/Form"
+import Form from "../compounents/Form"
 
 const url_movies = "http://localhost:3000/api/v1/movies"
 const url_base = "http://localhost:3000"
 
-import { useContext } from 'react'
-import GlobalContext from '../context/GlobalContex'
+import { useMoviesProvider } from "../contexts/MoviesContex"
 
 
 export default function SingleMovie() {
 
     const [movie, setMovie] = useState({})
 
-    const { isLoading, setIsLoading } = useContext(GlobalContext)
+    const { setIsLoading } = useMoviesProvider()
 
     const { id } = useParams()
 

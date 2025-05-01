@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { MoviesProvider } from "./contexts/MoviesContex"
 
-import Error404 from "./pages/Error404"
+import Error404 from "./Error/Error404"
 import DefaultLayout from "./Layout/defaultLayout"
 import Home from "./pages/Home"
 import SingleMovie from "./pages/SingleMovie"

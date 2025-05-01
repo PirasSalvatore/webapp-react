@@ -1,7 +1,7 @@
-import MoviesCard from '../Compounent/MoviesCard';
+import MoviesCard from '../compounents/MoviesCard';
 import Error500 from '../Error/Error500';
 
-import { useMoviesProvider } from '../contexts/MoviesContex'
+import { useMoviesProvider } from '../contexts/../contexts/MoviesContex'
 
 export default function Home() {
 
