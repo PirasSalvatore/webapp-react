@@ -10,9 +10,6 @@ export default function DefaultLayout() {
 
     const { isLoading } = useContext(GlobalContext)
 
-    console.log(isLoading);
-
-
     return (
         <>
 
@@ -28,7 +25,6 @@ export default function DefaultLayout() {
             }
 
             <Outlet />
-
 
             <Footer />
 

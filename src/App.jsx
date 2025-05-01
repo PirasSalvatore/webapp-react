@@ -1,28 +1,30 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { useState } from "react"
+import { MoviesProvider } from "./contexts/MoviesContex"
 
-
+import Error404 from "./pages/Error404"
 import DefaultLayout from "./Layout/defaultLayout"
 import Home from "./pages/Home"
 import SingleMovie from "./pages/SingleMovie"
-import GlobalContext from "./context/GlobalContex"
 
 function App() {
 
-  const [isLoading, setIsLoading] = useState(true)
-
   return (
 
-    <GlobalContext.Provider value={{ isLoading, setIsLoading }}>
+    <MoviesProvider>
       <BrowserRouter>
         <Routes>
+
           <Route element={<DefaultLayout />}>
             <Route index element={<Home />} />
             <Route path="/SingleMovie/:id" element={<SingleMovie />} />
           </Route>
+
+          <Route path="*" element={<Error404 />} />
+
         </Routes>
       </BrowserRouter>
-    </GlobalContext.Provider>
+    </MoviesProvider>
+
   )
 }
 
