@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 import { useContext } from 'react'
-import GlobalContext from '../context/GlobalContex'
+import GlobalContext from '../contexts/GlobalContex'
 
 
 export default function Header() {

@@ -1,9 +1,10 @@
 import { Outlet } from "react-router-dom"
-import Header from "../Compounent/Header"
-import Footer from "../Compounent/Footer"
+
+import Header from "../compounents/Header"
+import Footer from "../compounents/Footer"
 
 import { useContext } from "react"
-import GlobalContext from "../context/GlobalContex"
+import GlobalContext from "../contexts/GlobalContex"
 
 export default function DefaultLayout() {
 
