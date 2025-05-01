@@ -1,6 +1,4 @@
 
-//chiamate API per recuperare l'elenco dei film e le informazioni sui singoli film
-
 import { createContext, useContext, useState, useEffect } from "react"
 
 const url_movies = "http://localhost:3000/api/v1/movies"

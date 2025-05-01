@@ -1,5 +1,5 @@
 import MoviesCard from '../Compounent/MoviesCard';
-import Error500 from '../Compounent/Error500';
+import Error500 from '../Error/Error500';
 
 import { useMoviesProvider } from '../contexts/MoviesContex'
 
