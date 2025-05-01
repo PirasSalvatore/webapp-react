@@ -21,7 +21,7 @@ export default function From({ movieID }) {
         }
 
 
-        if (!convalidate(review)) return
+        if (!validate(review)) return
 
 
         fetch(`${url_movies}/${movieID}/reviews`, {
@@ -37,7 +37,7 @@ export default function From({ movieID }) {
 
     }
 
-    function convalidate(review) {
+    function validate(review) {
 
         const error = {}
 
